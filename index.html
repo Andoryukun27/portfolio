@@ -303,6 +303,46 @@
   .compose-status{ font-family:var(--mono); font-size:12.5px; margin-top:14px; text-align:center; min-height:1.4em; }
   .compose-status.success{ color:var(--teal); }
   .compose-status.error{ color:var(--rose); }
+
+  /* ---------- system specs (homebased-readiness readout) ---------- */
+  .specs-shell{
+    background:var(--panel); border:1px solid var(--border); border-radius:8px;
+    overflow:hidden;
+  }
+  .specs-shell .specs-head{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 20px; border-bottom:1px solid var(--border);
+    font-family:var(--mono); font-size:11.5px; color:var(--text-faint);
+    text-transform:uppercase; letter-spacing:0.07em;
+  }
+  .specs-shell .specs-head .live-tag{ text-transform:none; letter-spacing:0.06em; }
+  .specs-table{ width:100%; border-collapse:collapse; }
+  .specs-table tr{ border-bottom:1px dashed var(--border); }
+  .specs-table tr:last-child{ border-bottom:none; }
+  .specs-table td{ padding:13px 20px; font-size:13.8px; }
+  .specs-table td:first-child{
+    font-family:var(--mono); font-size:11.5px; color:var(--text-faint);
+    text-transform:uppercase; letter-spacing:0.06em; width:38%; white-space:nowrap;
+  }
+  .specs-table td:last-child{ color:var(--text); }
+  .specs-note{
+    padding:14px 20px; border-top:1px solid var(--border);
+    font-family:var(--mono); font-size:11.5px; color:var(--text-faint);
+  }
+  @media (max-width:560px){
+    .specs-table td:first-child{ white-space:normal; width:44%; }
+  }
+
+  /* ---------- social row ---------- */
+  .social-row{ display:flex; gap:10px; margin-top:16px; flex-wrap:wrap; }
+  .social-link{
+    display:inline-flex; align-items:center; gap:7px;
+    border:1px solid var(--border); border-radius:20px; padding:7px 14px;
+    font-family:var(--mono); font-size:12px; color:var(--text-dim);
+    text-decoration:none; transition:border-color .15s, color .15s;
+  }
+  .social-link svg{ width:14px; height:14px; }
+  .social-link:hover{ border-color:var(--amber); color:var(--amber); }
 </style>
 </head>
 <body>
@@ -317,6 +357,7 @@
       <a href="#skills">skills</a>
       <a href="#experience">log</a>
       <a href="#projects">deployed</a>
+      <a href="#specs">specs</a>
       <a href="#credentials">credentials</a>
       <a href="#contact">contact</a>
     </nav>
@@ -325,7 +366,7 @@
 
 <main>
   <section class="hero wrap" style="border-top:none; padding-top:96px;">
-    <div class="kicker">Marilao Bulacan, Philippines · Available for opportunities</div>
+    <div class="kicker">Marilao, Bulacan, Philippines · Onsite / Remote / Hybrid · Flexible Schedule</div>
     <h1>John Andrew D. Alviz<span class="cursor">&nbsp;</span></h1>
     <div class="role-rotator" id="roleRotator">IT Support Specialist</div>
     <p class="lede">I keep systems running and catch what breaks before it reaches the user — help desk support, server administration, quality assurance, and full-stack web development, all built on the same habit: document everything, verify everything.</p>
@@ -352,8 +393,9 @@
       </div>
       <dl class="field-list">
         <dt>Current role</dt><dd>IT Staff, Jo-Es Publishing House, Inc.</dd>
-        <dt>Based in</dt><dd>Valenzuela City, Philippines</dd>
-        <dt>Focus areas</dt><dd>IT Staff</dd>
+        <dt>Based in</dt><dd>Marilao, Bulacan, Philippines</dd>
+        <dt>Availability</dt><dd>Onsite, Remote, or Hybrid — Flexible schedule, available anytime</dd>
+        <dt>Focus areas</dt><dd>IT Support · QA & Testing · Web Development</dd>
         <dt>Email</dt><dd>jada042702@gmail.com</dd>
         <dt>Mobile</dt><dd>0924 113 4755</dd>
         <dt>GitHub</dt><dd>github.com/Andoryukun27</dd>
@@ -480,8 +522,33 @@
     </div>
   </section>
 
+  <section id="specs" class="wrap reveal">
+    <div class="section-head"><span class="idx">05</span><h2>system specs</h2><div class="rule"></div></div>
+    <p style="color:var(--text-dim); font-size:14.5px; margin-bottom:24px; max-width:640px;">
+      For homebased and remote roles — my current workstation, well above typical requirements for development, testing, and virtualized environments.
+    </p>
+    <div class="specs-shell">
+      <div class="specs-head">
+        <span>WORKSTATION-01</span>
+        <span class="live-tag"><span class="d"></span>Ready for remote work</span>
+      </div>
+      <table class="specs-table">
+        <tr><td>CPU</td><td>Intel Core i5-12400 (6 Cores / 12 Threads)</td></tr>
+        <tr><td>CPU Cooler</td><td>DeepCool AK400 Zero Dark</td></tr>
+        <tr><td>Motherboard</td><td>MSI PRO H610M-E DDR4</td></tr>
+        <tr><td>Memory</td><td>32GB (2×16GB) Kingston DDR4-3200</td></tr>
+        <tr><td>Graphics Card</td><td>Colorful GeForce RTX 3060 BattleAx 12GB</td></tr>
+        <tr><td>Storage</td><td>Kingston NV2 240GB NVMe SSD + Kingston 1TB SATA SSD + Kingston 500GB SATA SSD</td></tr>
+        <tr><td>Power Supply</td><td>MSI MAG A650BN 650W 80+ Bronze</td></tr>
+        <tr><td>Case</td><td>Coolman Aurora — 6× 120mm Fans (3 Intake / 3 Exhaust)</td></tr>
+        <tr><td>Operating System</td><td>Windows 11 Pro 26H2</td></tr>
+      </table>
+      <div class="specs-note">Internet speed test — to be added.</div>
+    </div>
+  </section>
+
   <section id="credentials" class="wrap reveal">
-    <div class="section-head"><span class="idx">05</span><h2>credentials</h2><div class="rule"></div></div>
+    <div class="section-head"><span class="idx">06</span><h2>credentials</h2><div class="rule"></div></div>
     <div class="cred-grid">
       <div>
         <h3>Education</h3>
@@ -506,19 +573,38 @@
   </section>
 
   <section id="contact" class="wrap reveal" style="border-bottom:1px solid var(--border);">
-    <div class="section-head"><span class="idx">06</span><h2>contact</h2><div class="rule"></div></div>
+    <div class="section-head"><span class="idx">07</span><h2>contact</h2><div class="rule"></div></div>
     <div class="contact-panel">
       <div>
         <h2>Let's fix, build, or test something.</h2>
-        <p>Open to IT support, QA/testing, and web development roles — onsite, hybrid, or homebased. I usually reply within a day.</p>
+        <p>Open to IT support, QA/testing, and web development roles — onsite, remote, or hybrid, with a flexible schedule and availability anytime. I usually reply within a day.</p>
         <button class="btn btn-primary" type="button" onclick="openCompose()">Send a message →</button>
+        <div class="social-row">
+          <a class="social-link" href="https://github.com/Andoryukun27" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+            GitHub
+          </a>
+          <a class="social-link" href="https://www.linkedin.com/in/john-andrew-alviz-875355363/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 11v5M8 8v.01M12 16v-5M12 11c0-1.3 1-2 2.2-2 1.3 0 1.8 1 1.8 2.3V16"/></svg>
+            LinkedIn
+          </a>
+          <a class="social-link" href="https://www.facebook.com/johnandrew.alviz.1" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h3l1-3h-4V9c0-.6.4-1 1-1z"/></svg>
+            Facebook
+          </a>
+          <a class="social-link" href="https://www.instagram.com/andoryuuu_kuuun/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.5"/><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"/></svg>
+            Instagram
+          </a>
+        </div>
       </div>
       <ul class="contact-list">
         <li><div class="label">Email</div><a href="mailto:jada042702@gmail.com">jada042702@gmail.com</a></li>
         <li><div class="label">Mobile</div><a href="tel:+639241134755">0924 113 4755</a></li>
         <li><div class="label">Viber</div><a href="viber://chat?number=%2B639854754333">0985 475 4333</a></li>
+        <li><div class="label">LinkedIn</div><a href="https://www.linkedin.com/in/john-andrew-alviz-875355363/" target="_blank" rel="noopener">linkedin.com/in/john-andrew-alviz</a></li>
         <li><div class="label">GitHub</div><a href="https://github.com/Andoryukun27" target="_blank" rel="noopener">github.com/Andoryukun27</a></li>
-        <li><div class="label">Location</div><a href="#">Marilao Bulacan, Philippines</a></li>
+        <li><div class="label">Location</div><a href="#">Marilao, Bulacan, Philippines</a></li>
       </ul>
     </div>
   </section>
